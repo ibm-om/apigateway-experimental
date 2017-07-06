@@ -26,4 +26,7 @@ The user has succesfully setup the API Connect Toolkit and can test their API's 
 
 ![Image of Datapower Reboot](/images/oauth20/security_section.png)
 
+2. In the Security Section, ensure OAuth Providers is selected and click the Add button on OAuth Providers.
+
+![Image of Datapower Reboot](/images/oauth20/security_oauth.png)
 
