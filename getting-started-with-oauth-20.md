@@ -53,6 +53,19 @@ Note: Base path must be unique. No two OAuth Provider objects can have the same 
 
 ![Image of Datapower Reboot](/images/oauth20/running.png)
 
+7. Once the gateway starts, it will detect that an OAuth Provider Settings object exists and it will auto generate a corresponding API.
+
+![Image of Datapower Reboot](/images/oauth20/provider_exists.png)
+
+This API is like any other API, but in the Assemble action it has an OAuth-generate action that references to the OAuth Provider Settings object.
+
+![Image of Datapower Reboot](/images/oauth20/oauth-generated.png)
+
+Note: Some default parameters and security definitions/requirements are added to this API. But you can edit this API like any other normal API. For example, update the API security definitions or requirements, request and response parameters or add policies to the assembly that needs to be executed before the token generation as per your needs. But you can’t change the base path, authorize endpoint and token endpoint directly in the API. 
+
+
+
+
 
 
 
