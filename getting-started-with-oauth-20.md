@@ -72,7 +72,7 @@ Note: Some default parameters and security definitions/requirements are added to
 Now you can send a request to test the Client credentials grant type. Use postman or curl
 
 
-### Curl
+#### Curl
 
 ```
 curl -k -X POST \
