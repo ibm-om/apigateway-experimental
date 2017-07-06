@@ -70,7 +70,8 @@ Now you can send a request to test the Client credentials grant type. Use postma
 
 ### Curl
 
-```curl -k -X POST \
+```
+curl -k -X POST \
   'https://127.0.0.1:4002/oauth2/token?client_id=default' \
   -H 'client_id: default' \
   -H 'content-type: application/x-www-form-urlencoded' \
@@ -80,7 +81,8 @@ Now you can send a request to test the Client credentials grant type. Use postma
 Note: A default client is created by the toolkit. Its client_id is “default” and client_secret is “SECRET” 
 You should get an access token back:
 
-```{
+```
+{
   "token_type": "bearer",
   "access_token": "AAIHZGVmYXVsdMeldWS6j1KEm0pi0FRbdRm-aOq9y3nt2l3azyZO9XaK4xmiB6YgY_6GtVBHSo9yiU4F3VD2Qlp_UR7_d8OUew0",
   "scope": "scope1",
