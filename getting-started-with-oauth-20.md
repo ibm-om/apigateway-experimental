@@ -95,6 +95,71 @@ You should get an access token back:
 }
 ```
 
+#### Postman
+
+The following instructions are for retrieving the token using the Postman App, not the Postman Chrome App (installed via the Chrome App Store). Postman can be downloaded from [Postman WebSite](https://www.getpostman.com/)
+
+### Disable SSL certificate verification
+
+1. Click the "wrench" at the upper right corner of Postman, select ```Settings``` when the menu options appear
+
+![Image of Datapower Reboot](/images/oauth20/settings.png)
+
+2. The Settings Window will appear after Selecting ```Settings```, make sure to select the ```General``` tab/section.  Clock the ```X``` at the upper right corner to save and dismiss the screen.
+
+![Image of Datapower Reboot](/images/oauth20/cert-verify.png)
+
+### Create a Request
+From the Postman Screen
+
+![Image of Datapower Reboot](/images/oauth20/cert-verify.png)
+
+
+1. Add a new Tab if needed by pressing the ```+``` tab.
+
+2. Change the request from ```GET``` to a ```POST```
+
+3. Add the URL ```https://127.0.0.1:4002/oauth2/token``` at ```Enter request URL```
+
+4. Click the Params button, click ```Bulk Edit``` and enter the following value:
+
+```
+client_id:default
+```
+
+5. Click the ```Headers``` tab/button, click ```Bulk Edit``` and enter the following value:
+
+```
+client_id:default
+Content-Type:application/x-www-form-urlencoded
+```
+
+The screen should look like this:
+
+![Image of Datapower Reboot](/images/oauth20/post-one.png)
+
+6. Next Click the ```Body``` tab/button. click ```Bulk Edit``` and enter the following value:
+
+```
+client_id:default
+client_secret:SECRET
+grant_type:client_credentials
+scope:scope1
+```
+
+The screen should look like this
+![Image of Datapower Reboot](/images/oauth20/post-two.png)
+
+7. Press the Send button when you want to retrieve the token, check the ```Response" Window for the token
+
+![Image of Datapower Reboot](/images/oauth20/result.png)
+
+
+
+
+
+
+
 
 
 
