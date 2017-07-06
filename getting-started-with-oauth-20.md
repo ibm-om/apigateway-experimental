@@ -22,6 +22,6 @@ The user has succesfully setup the API Connect Toolkit and can test their API's 
 
 > ``` SKIP_LOGIN=true apic edit```
 
-5. Navigate to the Security Section (Click ```Securit```)
+5. Navigate to the Security Section (Click ```Security'``)
 
-![Image of Datapower Reboot](/images/oauth20/DataPower_reboot_small.png)
+![Image of Datapower Reboot](/images/oauth20/security_section.png)
