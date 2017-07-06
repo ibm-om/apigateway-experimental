@@ -18,6 +18,8 @@ The user has succesfully setup the API Connect Toolkit and can test their API's 
 
 > ```apic config:set oauth-redirect-uri=https://localhost``` 
 
+---
+
 ### Edit the configuration
 
 > ``` SKIP_LOGIN=true apic edit```
@@ -62,6 +64,8 @@ This API is like any other API, but in the Assemble action it has an OAuth-gener
 ![Image of Datapower Reboot](/images/oauth20/oauth-generated.png)
 
 Note: Some default parameters and security definitions/requirements are added to this API. But you can edit this API like any other normal API. For example, update the API security definitions or requirements, request and response parameters or add policies to the assembly that needs to be executed before the token generation as per your needs. But you can’t change the base path, authorize endpoint and token endpoint directly in the API. 
+
+---
 
 ### Testing
 
