@@ -112,7 +112,7 @@ The following instructions are for retrieving the token using the Postman App, n
 ### Create a Request
 From the Postman Screen
 
-![Image of Datapower Reboot](/images/oauth20/cert-verify.png)
+![Image of Datapower Reboot](/images/oauth20/request.png)
 
 
 1. Add a new Tab if needed by pressing the ```+``` tab.
