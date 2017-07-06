@@ -63,6 +63,29 @@ This API is like any other API, but in the Assemble action it has an OAuth-gener
 
 Note: Some default parameters and security definitions/requirements are added to this API. But you can edit this API like any other normal API. For example, update the API security definitions or requirements, request and response parameters or add policies to the assembly that needs to be executed before the token generation as per your needs. But you can’t change the base path, authorize endpoint and token endpoint directly in the API. 
 
+### Testing
+
+Now you can send a request to test the Client credentials grant type. Use postman or curl
+
+
+### Curl
+curl -k -X POST \
+  'https://127.0.0.1:4002/oauth2/token?client_id=default' \
+  -H 'client_id: default' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -d 'client_id=default&client_secret=SECRET&grant_type=client_credentials&scope=scope1'
+
+Note: A default client is created by the toolkit. Its client_id is “default” and client_secret is “SECRET” 
+You should get an access token back:
+
+{
+  "token_type": "bearer",
+  "access_token": "AAIHZGVmYXVsdMeldWS6j1KEm0pi0FRbdRm-aOq9y3nt2l3azyZO9XaK4xmiB6YgY_6GtVBHSo9yiU4F3VD2Qlp_UR7_d8OUew0",
+  "scope": "scope1",
+  "expires_in": 3600,
+  "consented_on": 1498852931
+}
+
 
 
 
