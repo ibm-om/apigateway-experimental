@@ -3,10 +3,12 @@
 ## Overview
 The purpose of this guide is to show the user how to setup OAuth in the new API Connect Toolkit.
 
-### Assumptions
+## Assumptions
 The user has succesfully setup the API Connect Toolkit and can test their API's (the README.md file in this project contains the details).
 
-#### First Step
+## Steps
+
+### First Step
 
 1. Turn on "experimental mode" in APIC Toolkit 
 
@@ -19,3 +21,7 @@ The user has succesfully setup the API Connect Toolkit and can test their API's 
 4. Edit the configuration
 
 > ``` SKIP_LOGIN=true apic edit```
+
+5. Navigate to the Security Section (Click ```Securit```)
+
+![Image of Datapower Reboot](/images/oauth20/DataPower_reboot_small.png)
