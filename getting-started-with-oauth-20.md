@@ -74,7 +74,8 @@ Now you can send a request to test the Client credentials grant type. Use postma
   'https://127.0.0.1:4002/oauth2/token?client_id=default' \
   -H 'client_id: default' \
   -H 'content-type: application/x-www-form-urlencoded' \
-  -d 'client_id=default&client_secret=SECRET&grant_type=client_credentials&scope=scope1'```
+  -d 'client_id=default&client_secret=SECRET&grant_type=client_credentials&scope=scope1'
+  ```
 
 Note: A default client is created by the toolkit. Its client_id is “default” and client_secret is “SECRET” 
 You should get an access token back:
@@ -85,7 +86,8 @@ You should get an access token back:
   "scope": "scope1",
   "expires_in": 3600,
   "consented_on": 1498852931
-}```
+}
+```
 
 
 
