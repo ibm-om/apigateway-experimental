@@ -28,5 +28,14 @@ The user has succesfully setup the API Connect Toolkit and can test their API's 
 
 2. In the Security Section, ensure OAuth Providers is selected and click the Add button on OAuth Providers.
 
-![Image of Datapower Reboot](/images/oauth20/security_oauth.png)
+![Image of Datapower Reboot](/images/oauth20/security-oauth.png)
+
+3. The ```Create OAuth Provider``` screen will appear after clicking the Add button
+
+![Image of Datapower Reboot](/images/oauth20/oauth_provider.png)
+
+4. Provide a name say, ```first-oauth-provider``` and give a Base path, say ```/```.
+Note: Base path must be unique. No two OAuth Provider objects can have the same base path. This base path will be used to auto generate an API. ( See next steps)
+
+5.	Click save. You can click on the name again to see the details of the API and change any default values if you need to.
 
