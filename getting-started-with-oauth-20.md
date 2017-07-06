@@ -38,18 +38,16 @@ The user has succesfully setup the API Connect Toolkit and can test their API's 
 
 Note: Base path must be unique. No two OAuth Provider objects can have the same base path. This base path will be used to auto generate an API. ( See next steps)
 
-5.	Click save. You can click on the name again to see the details of the API and change any default values if you need to.
+5.	Click save. You can click on the name again to see the details of the API and change any default values if you need to.  The following are the default values:
 
-The following are the default values:
-
-  1.	Provider type is “APIConnect”, which means APIC will generate the access tokens.
-  1.	Scopes: Default is “Scope1”.
-  1.	Grants: Both “Application” and “Access Code” grant tyes are enabled by default
-  1.	Authorize Endpoint: /oauth2/authorize
-  1.	Token Endpoint: /oauth2/token
-  1.  APIC Token Secret: oauth-default-key.  This corresponds to the shared secret key object created in DataPower. Toolkit creates a default SS key named “oauth-default-key”. This is not editable from UI at this point. If you need to change this, you have to go to the “definitions” folder in the toolkit and update the yaml, but you should also ensure to create the key file and object in DataPower.
-  1.	Access Token TTL: default 3600 seconds
-  1.	Maximum consent TTL: default 3600 seconds
+    1.	Provider type is “APIConnect”, which means APIC will generate the access tokens.
+    1.	Scopes: Default is “Scope1”.
+    1.	Grants: Both “Application” and “Access Code” grant tyes are enabled by default
+    1.	Authorize Endpoint: /oauth2/authorize
+    1.	Token Endpoint: /oauth2/token
+    1.  APIC Token Secret: oauth-default-key.  This corresponds to the shared secret key object created in DataPower. Toolkit creates a default SS key named “oauth-default-key”. This is not editable from UI at this point. If you need to change this, you have to go to the “definitions” folder in the toolkit and update the yaml, but you should also ensure to create the key file and object in DataPower.
+    1.	Access Token TTL: default 3600 seconds
+    1.	Maximum consent TTL: default 3600 seconds
 
 6. Start the gateway if it is not already running.
 
