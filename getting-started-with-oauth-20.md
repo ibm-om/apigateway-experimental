@@ -8,7 +8,7 @@ The user has succesfully setup the API Connect Toolkit and can test their API's 
 
 ## Steps
 
-### First Step
+### Enable Experimental Mode
 
 1. Turn on "experimental mode" in APIC Toolkit 
 
@@ -18,10 +18,12 @@ The user has succesfully setup the API Connect Toolkit and can test their API's 
 
 > ```apic config:set oauth-redirect-uri=https://localhost``` 
 
-4. Edit the configuration
+### Edit the configuration
 
 > ``` SKIP_LOGIN=true apic edit```
 
-5. Navigate to the Security Section (Click ```Security```)
+1. Navigate to the Security Section (Click ```Security```)
 
 ![Image of Datapower Reboot](/images/oauth20/security_section.png)
+
+
