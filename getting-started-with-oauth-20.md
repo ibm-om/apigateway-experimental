@@ -140,7 +140,9 @@ The screen should look like this:
 
 ![Image of Datapower Reboot](/images/oauth20/post-one.png)
 
-6. Next Click the ```Body``` tab/button. click ```Bulk Edit``` and enter the following value:
+6. Next Click the ```Body``` tab/button; then click the radio button ```x-www-form-urlencoded```.   
+
+7. Click ```Bulk Edit``` and enter the following value:
 
 ```
 client_id:default
@@ -152,23 +154,6 @@ scope:scope1
 The screen should look like this
 ![Image of Datapower Reboot](/images/oauth20/post-two.png)
 
-7. Press the Send button when you want to retrieve the token, check the ```Response``` Window for the token
+8. Press the Send button when you want to retrieve the token, check the ```Response``` Window for the token
 
 ![Image of Datapower Reboot](/images/oauth20/result.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
