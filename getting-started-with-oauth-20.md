@@ -22,25 +22,27 @@ The user has succesfully setup the API Connect Toolkit and can test their API's 
 
 ### Edit the configuration
 
-> ``` SKIP_LOGIN=true apic edit```
+> ``` apic edit```
 
-1. Navigate to the Security Section (Click ```Security```)
+1. Sign in or Register at the login screen
+
+2. Navigate to the Security Section (Click ```Security```)
 
 ![Image of Datapower Reboot](/images/oauth20/security_section.png)
 
-2. In the Security Section, ensure OAuth Providers is selected and click the Add button on OAuth Providers.
+3. In the Security Section, ensure OAuth Providers is selected and click the Add button on OAuth Providers.
 
 ![Image of Datapower Reboot](/images/oauth20/security-oauth.png)
 
-3. The ```Create OAuth Provider``` screen will appear after clicking the Add button
+4. The ```Create OAuth Provider``` screen will appear after clicking the Add button
 
 ![Image of Datapower Reboot](/images/oauth20/oauth_provider.png)
 
-4. Provide a name say, ```first-oauth-provider``` and give a Base path, say ```/```.
+5. Provide a name say, ```first-oauth-provider``` and give a Base path, say ```/```.
 
 Note: Base path must be unique. No two OAuth Provider objects can have the same base path. This base path will be used to auto generate an API. ( See next steps)
 
-5.	Click save. You can click on the name again to see the details of the API and change any default values if you need to.  The following are the default values:
+6.	Click save. You can click on the name again to see the details of the API and change any default values if you need to.  The following are the default values:
 
     1.	Provider type is “APIConnect”, which means APIC will generate the access tokens.
     1.	Scopes: Default is “Scope1”.
@@ -51,11 +53,11 @@ Note: Base path must be unique. No two OAuth Provider objects can have the same 
     1.	Access Token TTL: default 3600 seconds
     1.	Maximum consent TTL: default 3600 seconds
 
-6. Start the gateway if it is not already running.
+7. Start the gateway if it is not already running.
 
 ![Image of Datapower Reboot](/images/oauth20/running.png)
 
-7. Once the gateway starts, it will detect that an OAuth Provider Settings object exists and it will auto generate a corresponding API.
+8. Once the gateway starts, it will detect that an OAuth Provider Settings object exists and it will auto generate a corresponding API.
 
 ![Image of Datapower Reboot](/images/oauth20/provider_exists.png)
 
