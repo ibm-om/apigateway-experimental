@@ -1,8 +1,7 @@
 ---
-
 copyright:
 years: 2017
-lastupdated: "2017-07-27"
+lastupdated: "2017-08-15"
 author: "Om Goeckermann"
 comment: "US Government Users Restricted Rights - Use, duplication, or
 disclosure restricted by GSA ADP Schedule Contract with IBM Corp."
@@ -13,7 +12,7 @@ disclosure restricted by GSA ADP Schedule Contract with IBM Corp."
 ### Guides for specific operating systems
 
 | Operating System | Reference             |
-| ________________ | _____________________ |
+| ---------------- | --------------------- |
 | MacOS            | ![/troubleshoot/macos-install.md](macos-install.md) |
 | Linux            | ![/troubleshoot/linux-install.md](linux-install.md) |
 | Windows 10       | ![/troubleshoot/win10-install.md](win10-install.md) |

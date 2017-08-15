@@ -1,10 +1,10 @@
 ---
-
 copyright:
 years: 2017
-lastupdated: "2017-07-10"
+lastupdated: "2017-08-15"
 author: "Om Goeckermann"
-
+comment: "US Government Users Restricted Rights - Use, duplication, or
+disclosure restricted by GSA ADP Schedule Contract with IBM Corp."
 ---
 # Windows 7 install of the Toolkit preview
 Information References
@@ -44,39 +44,36 @@ Ensure that you configure Docker to allocate at least 4.0 GB of memory and 2 CPU
 
 8. Start API Connect Designer by entering `apic edit`.
 
-9. In the API Connect Designer, remove any automatically generated Security Definitions.
-   - a. Select the **Design** tab.
+**Step result:** `Express server listening on http://127.0.0.1:9000...`
+
+9. In the API Connect Designer, remove the automatically generated Security Definitions.
+   - a. Select the existing API, and then the **Design** tab.
    - b. Select **Security Definitions** in the left navigation menu.
-   - c. Click the trash symbol to delete, and click `Ok` in the popup confirmation.
-   - d. Click the **Save** icon.
+   - c. Click the [](https://github.com/ibm-apiconnect/apigateway-experimental/images/delete_icon_dark.png "Delete") symbol to delete the existing definitions, and click `Ok` in each popup confirmation.
+   - d. Click the **Save** icon [](https://github.com/ibm-apiconnect/apigateway-experimental/images/icon_save.png "Save").
 
 ![Security Definitions step](https://github.com/ibm-apiconnect/apigateway-experimental/images/security_definitions.png "Security Definitions step")
 
-10. In the API Connect Designer, select DataPower Gateway Policies.
+10. In the API Connect Designer, select DataPower Policies.
    - Click the **Assemble** tab.
-   - Click the **Create assembly** button.
-   - Select the **Filter policies** icon (striped triangle).
-   - Select the **DataPower Gateway Policies**.
-   - Click **Save** to complete the step.
+   - Click the **Filter policies** icon [](https://github.com/ibm-apiconnect/apigateway-experimental/images/filter-policies.png "Filter policies") to expose the policies chooser.
+   - Ensure that **DataPower Gateway policies** is selected.
+   - Click the **Save** icon [](https://github.com/ibm-apiconnect/apigateway-experimental/images/icon_save.png "Save") to complete the step.
 
-### Result
-```
-Successfully built 23d09337f161
-Successfully tagged ibm-apiconnect-toolkit/datapower-api-gateway-v6:1.0.52
-```
-You are now able to run your tests against the DataPower Gateway.
-Refer to the __Getting Started__ tutorials, or documentation for more information.
+11. Click the **Start the servers** icon [](https://github.com/ibm-apiconnect/apigateway-experimental/images/api-designer-run-btn.png "Start the servers").
 
+**Step result:** The status bar of the browser window displays "Running" next to the Gateway and Application IP addresses.
 
-## Using the DataPower Docker container
-To find the URL for DataPower enter `docker ps`.
+### Using the DataPower Docker Container
+To find the DataPower gateway URL, use a new CLI window.
+   1. Enter `docker ps`.
+      DataPower is associated with the image that contains `datapower-api-gateway-v6` or `/bin/drouter`.
+   2. The PORTS entry with `->9090tcp` contains the port where the DataPower gateway can be reached.
+      Example: `0.0.0.0:32769->9090/tcp`
+   3. Access the DataPower gateway by opening the secure IP `0.0.0.0:port` in your browser.
+      Example: `https://0.0.0.0:32769`
+   4. Log in to `drouter` with the default username/password (`admin`/`admin`) and use the `default` domain.
 
-Find the image with `datapower-api-gateway-v6` or in `/bin/drouter`.
-
-Find the Ports entry with 9090/tcp
-    • Example : `0.0.0.0:32769->9090/tcp`
-
-To access the DataPower container, open the web page https://0.0.0.0:32769 in your browser, and log in to `drouter` with the default username/password (`admin`/`admin`).
 
 ## Troubleshooting
 On Windows 10, after you edit a YAML file, you must stop and restart the server for the changes to be recognized.
