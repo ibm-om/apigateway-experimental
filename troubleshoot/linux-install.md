@@ -9,7 +9,6 @@ author: "Om Goeckermann"
 # Linux install of the Toolkit preview
 Information References
 https://www.npmjs.com/package/apiconnect
-https://github.ibm.com/apimesh/apiconnect-mgmt-lite-datapower
 https://www.ibm.com/support/knowledgecenter/en/SSMNED_5.0.0/com.ibm.apic.toolkit.doc/tapim_apic_test_with_dpdockergateway.html
 
 ## Follow these instructions to prepare an environment for the API Connect Toolkit preview.
@@ -49,23 +48,21 @@ Ensure that you configure Docker to allocate at least 4.0 GB of memory and 2 CPU
 
 3. Enter `npm cache clean` and then `npm uninstall -g apiconnect`.
 
-4. Enter `npm install apiconnect -g --registry http://apim-ci1.rtp.raleigh.ibm.com:4873`
+4. Enter `npm install apiconnect -g`.
 
-5. Enter `docker login datapower-docker-local.artifactory.swg-devops.com`.
+5. Create a new directory for the required loopback project, and `cd` into it.
 
-6. Create a new directory for the required loopback project, and `cd` into it.
-
-7. Install a loopback project when you enter the following.
+6. Install a loopback project when you enter the following.
   ```
   apic loopback
   ```
   Loopback presents a series of choices, select the default for each.
 
-8. Prepare API Connect to use the Toolkit preview Docker image by entering `apic config:set datapower-api-gateway-experimental=true`.
+7. Prepare API Connect to use the Toolkit preview Docker image by entering `apic config:set datapower-api-gateway-experimental=true`.
 
-9. Start API Connect Designer by entering `apic edit`.
+8. Start API Connect Designer by entering `apic edit`.
 
-10. In the API Connect Designer, remove any automatically generated Security Definitions.
+9. In the API Connect Designer, remove any automatically generated Security Definitions.
    - a. Select the **Design** tab.
    - b. Select **Security Definitions** in the left navigation menu.
    - c. Click the trash symbol to delete, and click `Ok` in the popup confirmation.
@@ -73,7 +70,7 @@ Ensure that you configure Docker to allocate at least 4.0 GB of memory and 2 CPU
 
 ![Security Definitions step](https://github.com/ibm-apiconnect/apigateway-experimental/images/security_definitions.png "Security Definitions step")
 
-11. In the API Connect Designer, select DataPower Gateway Policies.
+10. In the API Connect Designer, select DataPower Gateway Policies.
    - a. Click the **Assemble** tab.
    - b. Click the **Create assembly** button.
    - c. Select the **Filter policies** icon (striped triangle).
@@ -99,7 +96,7 @@ The successful build will produce output similar to the following.
  ```
 
 ## If you are using a proxy
-For Ubuntu 16.04:
+For **Ubuntu 16.04**:
 
  1. Configure Docker proxy :
 

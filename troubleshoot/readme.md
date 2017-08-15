@@ -20,7 +20,7 @@ See: https://github.com/ibm-apiconnect/getting-started/blob/master/toolkit/0-Pre
 
 **OS specific install instructions:**
  | Operating System  | Reference              |
- | _________________ | ______________________ |
+ | ----------------- | ---------------------- |
  | MacOS             | ![macos-install.md](macos-install.md) |
  | Linux             | ![linux-install.md](linux-install.md) |
  | Windows 10        | ![win10-install.md](win10-install.md) |
