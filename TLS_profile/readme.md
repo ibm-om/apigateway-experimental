@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2017
-lastupdated: "2017-07-10"
+lastupdated: "2017-08-16"
 author: "Om Goeckermann"
 comment: "US Government Users Restricted Rights - Use, duplication, or
 disclosure restricted by GSA ADP Schedule Contract with IBM Corp."
@@ -22,26 +22,26 @@ The YAML file defining a TLS profile should have the following keys:
 **public:** a Boolean value indicating if the profile will be shared across API Manager and the Cloud Manager.
 
 **ciphers:** an array of cipher names acceptable with this profile.  
-  possible values:  
-    SSL_RSA_WITH_AES_256_CBC_SHA  
-    SSL_RSA_WITH_AES_128_CBC_SHA  
-    SSL_RSA_WITH_3DES_EDE_CBC_SHA  
-    SSL_RSA_WITH_RCA_128_SHA  
-    SSL_RSA_WITH_RCA_128_MD5  
+  possible values: 
+      SSL_RSA_WITH_AES_256_CBC_SHA
+      SSL_RSA_WITH_AES_128_CBC_SHA
+      SSL_RSA_WITH_3DES_EDE_CBC_SHA
+      SSL_RSA_WITH_RCA_128_SHA
+      SSL_RSA_WITH_RCA_128_MD5
 
 **protocols:** an array of TLS versions acceptable with this profile.  
   possible values:  
-    SSLv2  
-    SSLv3  
-    TLSv1  
-    TLSv11  
-    TLSv12  
+      SSLv2
+      SSLv3
+      TLSv1
+      TLSv11
+      TLSv12  
  
 **features:** an array of TLS features of this profile.  
-  possible values:  
-    DISABLE_SNI  
-    PERMIT_INSECURE_SSL  
-    ENABLE_COMPRESSION  
+  possible values:
+      DISABLE_SNI
+      PERMIT_INSECURE_SSL
+      ENABLE_COMPRESSION
 
 **certs:** an array of objects describing certificates used by this profile. Each object contains the following:
   **name:** generic name for the certificate
@@ -58,27 +58,29 @@ name: secure-loopback
 title: 'TLS Profile with Mutual Auth'
 public: false
 ciphers:
-    SSL_RSA_WITH_AES_256_CBC_SHA
-    SSL_RSA_WITH_AES_128_CBC_SHA
-    SSL_RSA_WITH_3DES_EDE_CBC_SHA
-    SSL_RSA_WITH_RCA_128_SHA
-    SSL_RSA_WITH_RCA_128_MD5
+ - SSL_RSA_WITH_AES_256_CBC_SHA
+ - SSL_RSA_WITH_AES_128_CBC_SHA
+ - SSL_RSA_WITH_3DES_EDE_CBC_SHA
+ - SSL_RSA_WITH_RCA_128_SHA
+ - SSL_RSA_WITH_RCA_128_MD5
 protocols:
-    TLSv1
-    TLSv11
-    TLSv12
+ - TLSv1
+ - TLSv11
+ - TLSv12
 features:
-    DISABLE_SNI
+ - DISABLE_SNI
 certs:
-    name: Certificate
-    cert:
+ - 
+   name: Certificate
+   cert:
     $ref: cacert.pem
-    cert-type: CLIENT
-    name: Certificate
-    cert:
+   cert-type: CLIENT
+  -
+   name: Certificate
+   cert:
     $ref: client.pem
-    cert-type: PUBLIC
+   cert-type: PUBLIC
 mutual-auth: true
 private-key:
-    $ref: client.key
+   $ref: client.key
 ```
