@@ -9,8 +9,7 @@ disclosure restricted by GSA ADP Schedule Contract with IBM Corp."
 ## Adding a TLS profile to use with the Invoke policy:
 
 ### Introduction
-The TLS profile can be added to your project as a file in YAML format. You can refer to the defined TLS Profile in an invoke action to enable server
-verification, and optionally, client verification.
+The TLS profile can be added to your project as a file in YAML format. You can refer to the defined TLS Profile from an invoke action to enable server verification, and optionally, client verification.
 
 ### The YAML file
 The YAML file defining a TLS profile should have the following keys:
@@ -24,11 +23,11 @@ The YAML file defining a TLS profile should have the following keys:
 **ciphers:** an array of cipher names acceptable with this profile.  
 
     possible values:
-                    SSL_RSA_WITH_AES_256_CBC_SHA |
-                    SSL_RSA_WITH_AES_128_CBC_SHA |
-                    SSL_RSA_WITH_3DES_EDE_CBC_SHA | 
-                    SSL_RSA_WITH_RCA_128_SHA |
-                    SSL_RSA_WITH_RCA_128_MD5 |
+                    SSL_RSA_WITH_AES_256_CBC_SHA
+                    SSL_RSA_WITH_AES_128_CBC_SHA
+                    SSL_RSA_WITH_3DES_EDE_CBC_SHA
+                    SSL_RSA_WITH_RCA_128_SHA
+                    SSL_RSA_WITH_RCA_128_MD5
 
 **protocols:** an array of TLS versions acceptable with this profile.  
 
@@ -56,7 +55,8 @@ Each **certs:** object contains the following:
 
 **private-key:** content of the private key corresponding to the client certificate in PEM format, or an object with the key `$ref` pointing to the file containing the private key.
 
-EXAMPLE YAML FILE: tls-profile.yaml
+### Example YAML file:
+**tls-profile.yaml**
 ```
 name: secure-loopback
 title: 'TLS Profile with Mutual Auth'
