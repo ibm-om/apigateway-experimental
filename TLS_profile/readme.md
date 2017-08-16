@@ -21,7 +21,7 @@ The YAML file defining a TLS profile should have the following keys:
 **public:** a Boolean value indicating if the profile will be shared across API Manager and the Cloud Manager.
 
 **ciphers:** an array of cipher names acceptable with this profile.  
-   possible values:  
+   Possible values:  
       SSL_RSA_WITH_AES_256_CBC_SHA  
       SSL_RSA_WITH_AES_128_CBC_SHA  
       SSL_RSA_WITH_3DES_EDE_CBC_SHA  
