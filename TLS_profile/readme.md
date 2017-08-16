@@ -23,34 +23,34 @@ The YAML file defining a TLS profile should have the following keys:
 
 **ciphers:** an array of cipher names acceptable with this profile.  
 
-    possible values:  
-        SSL_RSA_WITH_AES_256_CBC_SHA  
-        SSL_RSA_WITH_AES_128_CBC_SHA  
-        SSL_RSA_WITH_3DES_EDE_CBC_SHA  
-        SSL_RSA_WITH_RCA_128_SHA  
-        SSL_RSA_WITH_RCA_128_MD5  
+    possible values:
+                    SSL_RSA_WITH_AES_256_CBC_SHA |
+                    SSL_RSA_WITH_AES_128_CBC_SHA |
+                    SSL_RSA_WITH_3DES_EDE_CBC_SHA | 
+                    SSL_RSA_WITH_RCA_128_SHA |
+                    SSL_RSA_WITH_RCA_128_MD5 |
 
 **protocols:** an array of TLS versions acceptable with this profile.  
 
-    possible values:  
-        SSLv2  
-        SSLv3  
-        TLSv1  
-        TLSv11  
-        TLSv12  
+    possible values:
+                    SSLv2
+                    SSLv3
+                    TLSv1
+                    TLSv11
+                    TLSv12
  
 **features:** an array of TLS features of this profile.  
 
-    possible values:  
-        DISABLE_SNI  
-        PERMIT_INSECURE_SSL  
-        ENABLE_COMPRESSION  
+    possible values:
+                    DISABLE_SNI
+                    PERMIT_INSECURE_SSL
+                    ENABLE_COMPRESSION
 
-**certs:** an array of objects describing certificates used by this profile. Each object contains the following:  
-
-    name: generic name for the certificate.  
-    cert-type: either CLIENT to indicate CA certificate verifying target URL or PUBLIC to indicate client certificate.  
-    cert: content of the certificate in PEM format or an object with the key `$ref` pointing to the file containing the certificate.  
+**certs:** an array of objects describing certificates used by this profile.  
+Each **certs:** object contains the following:  
+>    **name:** generic name for the certificate.  
+>    **cert-type:** either CLIENT to indicate CA certificate verifying target URL or PUBLIC to indicate client certificate.  
+>    **cert:** content of the certificate in PEM format or an object with the key `$ref` pointing to the file containing the certificate.  
 
 **mutual-auth:** a Boolean value indicating if mutual authenticate should be enabled for this profile.
 
@@ -79,7 +79,7 @@ certs:
    cert:
     $ref: cacert.pem
    cert-type: CLIENT
-  -
+ -
    name: Certificate
    cert:
     $ref: client.pem
