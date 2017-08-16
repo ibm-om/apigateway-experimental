@@ -38,7 +38,7 @@ Objects with a period (.) in the name require the period to be escaped with \ fo
  ```
 
 
-Toolkit-preview does not require map policy to have strings escaped. The following is valid swagger and should also do the trick, eliminate the escaping, and make the code readable, and I believe the map policy in v6 writes the swagger in this manner, unlike the v5 map policy that insists on having the escaped string.
+Toolkit-preview does not require map policy javascript to have strings escaped in the same manner as version 5. The following is valid swagger and the map policy in v6 writes the swagger in this manner, unlike the v5 map policy that insists on having the escaped string.
 
              - set: output.full_name
                from:
